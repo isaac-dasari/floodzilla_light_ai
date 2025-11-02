@@ -22,15 +22,15 @@ Low-cost, CPU-only flood analytics with explainable risk scores, lightweight for
 ## Architecture Overview
 ```mermaid
 flowchart LR
-    raw[Raw Gauge JSON\n(gauge_readings_3y/)] --> curate(curate_data.py\nClean + quality flags)
-    curate --> curated[dataset_parquet/]
-    curated --> features(build_features.py\nFeature engineering)
-    features --> features_dir[features_parquet/]
-    features_dir --> summaries(summaries_strands.py\nWeekly LLM summaries)
-    summaries --> summaries_dir[summaries/]
-    curated --> forecast(forecast_prophet.py\nProphet per gauge)
-    forecast --> forecast_dir[forecasts_parquet/]
-    curated --> dashboard(dashboard_app.py\nStreamlit dashboard)
+    raw["Raw Gauge JSON\n(gauge_readings_3y/)"] --> curate["curate_data.py\nClean + quality flags"]
+    curate --> curated["dataset_parquet/"]
+    curated --> features["build_features.py\nFeature engineering"]
+    features --> features_dir["features_parquet/"]
+    features_dir --> summaries["summaries_strands.py\nWeekly LLM summaries"]
+    summaries --> summaries_dir["summaries/"]
+    curated --> forecast["forecast_prophet.py\nProphet per gauge"]
+    forecast --> forecast_dir["forecasts_parquet/"]
+    curated --> dashboard["dashboard_app.py\nStreamlit dashboard"]
     features_dir --> dashboard
     forecast_dir --> dashboard
     summaries_dir --> dashboard
