@@ -1,0 +1,15 @@
+.DS_Store
+__pycache__/
+.venv/
+
+# Local configuration
+.vscode/
+
+# Data & cache artifacts (not for GitHub)
+gauge_readings_3y/
+dataset_parquet/
+features_parquet/
+forecasts_parquet/
+summaries/
+llm_cache/
+llm_counters.json

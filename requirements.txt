@@ -1,0 +1,10 @@
+pandas==2.2.2
+numpy==1.26.4
+pyarrow==17.0.0
+prophet==1.1.5
+streamlit==1.38.0
+scikit-learn==1.5.1
+matplotlib==3.9.0
+cmdstanpy==1.2.4
+plotly==5.23.0
+strands-agents[litellm]
